@@ -1,0 +1,15 @@
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\bin\Debug\net9.0\StringCalculator.exe
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\bin\Debug\net9.0\StringCalculator.deps.json
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\bin\Debug\net9.0\StringCalculator.runtimeconfig.json
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\bin\Debug\net9.0\StringCalculator.dll
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\bin\Debug\net9.0\StringCalculator.pdb
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\StringCalculator.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\StringCalculator.AssemblyInfoInputs.cache
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\StringCalculator.AssemblyInfo.cs
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\StringCalculator.csproj.CoreCompileInputs.cache
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\StringCalculator.sourcelink.json
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\StringCalculator.dll
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\refint\StringCalculator.dll
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\StringCalculator.pdb
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\StringCalculator.genruntimeconfig.cache
+c:\Users\Sergho\Desktop\C#\ht6\StringCalculator\obj\Debug\net9.0\ref\StringCalculator.dll
