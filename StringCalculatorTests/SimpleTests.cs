@@ -66,4 +66,20 @@ public class SimpleTests
         string result = Calculate(expression);
         Assert.Equal("6", result);
     }
+
+    [Theory]
+    [InlineData("+14 + 27")]
+    public void FirstForcePositiveOperandTest(string expression)
+    {
+        string result = Calculate(expression);
+        Assert.Equal("41", result);
+    }
+
+    [Theory]
+    [InlineData("13 - +13")]
+    public void SecondForcePositiveOperandTest(string expression)
+    {
+        string result = Calculate(expression);
+        Assert.Equal("0", result);
+    }
 }
