@@ -74,6 +74,7 @@ public class StringParser : IStringParser
         List<ILexeme> popped = new List<ILexeme>();
         while (stack.Count != 0)
         {
+            if (stack.First() is not OperationLexeme) throw new ExpressionSyntaxException();
             popped.Add(stack.Pop());
         }
         return popped;
