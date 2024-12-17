@@ -24,6 +24,9 @@ public class StringParser : IStringParser
     }
     private List<ILexeme> Split(string expression)
     {
+        StringFormatter formatter = new StringFormatter();
+        expression = formatter.Format(expression);
+
         string[] parts = expression.Split(" ");
         return parts.Select(Identify).ToList();
     }
