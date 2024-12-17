@@ -14,8 +14,10 @@ public class StringFormatter : IStringFormatter
     {
         expression = Regex.Replace(expression, @"_-", " - ");
         expression = Regex.Replace(expression, @"_\+", " + ");
-        expression = Regex.Replace(expression, @"_\*", " * ");
-        expression = Regex.Replace(expression, @"_\/", " / ");
+        expression = Regex.Replace(expression, @"\*", " * ");
+        expression = Regex.Replace(expression, @"\/", " / ");
+        expression = Regex.Replace(expression, @"\(", " ( ");
+        expression = Regex.Replace(expression, @"\)", " ) ");
         return expression;
     }
     private string CollapseOffsets(string expression)
