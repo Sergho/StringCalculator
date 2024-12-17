@@ -63,7 +63,7 @@ public class NegativeTests
     }
 
     [Theory]
-    [InlineData("5 + 5, * 7")]
+    [InlineData("5 + 5.0 * 7")]
     public void FractionalSyntaxTest(string expression)
     {
         Assert.Throws<ExpressionSyntaxException>(() => { Calculate(expression); });
