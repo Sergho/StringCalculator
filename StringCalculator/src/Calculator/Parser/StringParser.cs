@@ -28,6 +28,7 @@ public class StringParser : IStringParser
         expression = formatter.Format(expression);
 
         string[] parts = expression.Split(" ");
+        parts = parts.Where(part => part != "").ToArray();
         return parts.Select(Identify).ToList();
     }
     private List<ILexeme> PushOutOperations(OperationLexeme add, Stack<ILexeme> stack)
