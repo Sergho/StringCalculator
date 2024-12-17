@@ -9,4 +9,5 @@ public static class Constants
         {Operation.Multiplication, 2},
         {Operation.Division, 2},
     };
+    public static readonly int RoundDigits = 2;
 }
