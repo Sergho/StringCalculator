@@ -2,5 +2,5 @@
 namespace StringCalculator;
 public interface IStringParser
 {
-    List<ILexeme> PostExpression(string expression);
+    List<ILexeme> ComposePostExpression(string expression);
 }
