@@ -73,7 +73,7 @@ public class StringParser : IStringParser
         }
         return popped;
     }
-    public List<ILexeme> PostExpression(string expression)
+    public List<ILexeme> ComposePostExpression(string expression)
     {
         List<ILexeme> postExpression = new List<ILexeme>();
         Stack<ILexeme> stack = new Stack<ILexeme>();
