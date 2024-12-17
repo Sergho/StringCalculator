@@ -25,11 +25,29 @@ public class StringFormatter : IStringFormatter
         expression = Regex.Replace(expression, @"\s+", " ");
         return expression;
     }
+    private void CheckDoubleOperators(string expression)
+    {
+        if (Regex.Match(expression, @"[\+\-\*\/]\s[\+\-\*\/]").Success)
+        {
+            throw new ExpressionSyntaxException();
+        }
+    }
+    private void CheckDoubleOperands(string expression)
+    {
+        if (Regex.Match(expression, @"[0-9]\s[0-9]").Success)
+        {
+            throw new ExpressionSyntaxException();
+        }
+    }
     public string Format(string expression)
     {
         expression = MarkBinary(expression);
         expression = MakeOffsets(expression);
         expression = CollapseOffsets(expression);
+
+        CheckDoubleOperands(expression);
+        CheckDoubleOperators(expression);
+
         return expression;
     }
 }
