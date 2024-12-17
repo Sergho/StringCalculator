@@ -6,6 +6,7 @@ public class StringParser : IStringParser
     {
         foreach (Operation operation in Enum.GetValues(typeof(Operation)))
         {
+            if (part.Length != 1) break;
             if (((char)operation) == part[0]) return new OperationLexeme(operation);
         }
 
