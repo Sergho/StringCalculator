@@ -14,6 +14,7 @@ public class StringCalculator(string expression) : IStringCalculator
             case Operation.Multiplication:
                 return new OperandLexeme(first.Value * second.Value);
             case Operation.Division:
+                if (second.Value == 0) throw new DivideByZeroException();
                 return new OperandLexeme(first.Value / second.Value);
             default:
                 throw new UnknownOperationException();

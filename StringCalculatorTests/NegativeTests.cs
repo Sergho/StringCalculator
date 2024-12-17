@@ -15,40 +15,35 @@ public class NegativeTests
     [InlineData("6 / 0")]
     public void DivisionZeroTest(string expression)
     {
-        string result = Calculate(expression);
-        Assert.Throws<DivideByZeroException>(() => { });
+        Assert.Throws<DivideByZeroException>(() => { Calculate(expression); });
     }
 
     [Theory]
     [InlineData("(5 + 3")]
     public void IncorrectBracketsTest(string expression)
     {
-        string result = Calculate(expression);
-        Assert.Throws<ExpressionSyntaxException>(() => { });
+        Assert.Throws<ExpressionSyntaxException>(() => { Calculate(expression); });
     }
 
     [Theory]
     [InlineData("5 / *")]
     public void DoubleOperatorTest(string expression)
     {
-        string result = Calculate(expression);
-        Assert.Throws<ExpressionSyntaxException>(() => { });
+        Assert.Throws<ExpressionSyntaxException>(() => { Calculate(expression); });
     }
 
     [Theory]
     [InlineData("5 6 *")]
     public void DoubleOperandTest(string expression)
     {
-        string result = Calculate(expression);
-        Assert.Throws<ExpressionSyntaxException>(() => { });
+        Assert.Throws<ExpressionSyntaxException>(() => { Calculate(expression); });
     }
 
     [Theory]
     [InlineData("5 - 5 a 2")]
     public void UnknownSymbolTest(string expression)
     {
-        string result = Calculate(expression);
-        Assert.Throws<ExpressionSyntaxException>(() => { });
+        Assert.Throws<ExpressionSyntaxException>(() => { Calculate(expression); });
     }
 
     [Theory]
@@ -68,11 +63,10 @@ public class NegativeTests
     }
 
     [Theory]
-    [InlineData("5 + 5, * 7")]
+    [InlineData("5 + 5.0 * 7")]
     public void FractionalSyntaxTest(string expression)
     {
-        string result = Calculate(expression);
-        Assert.Throws<ExpressionSyntaxException>(() => { });
+        Assert.Throws<ExpressionSyntaxException>(() => { Calculate(expression); });
     }
 
     [Theory]

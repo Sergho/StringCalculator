@@ -30,6 +30,7 @@ public class StringFormatter : IStringFormatter
         expression = MarkBinary(expression);
         expression = MakeOffsets(expression);
         expression = CollapseOffsets(expression);
+
         return expression;
     }
 }
