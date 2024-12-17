@@ -22,6 +22,22 @@ public class StringParser : IStringParser
             throw new ExpressionSyntaxException();
         }
     }
+    private void checkDoubleLexemes(List<ILexeme> list)
+    {
+        ILexeme? last = null;
+        foreach (ILexeme lexeme in list)
+        {
+            if (last is OperandLexeme && lexeme is OperandLexeme)
+            {
+                throw new ExpressionSyntaxException();
+            }
+            if (last is OperationLexeme && lexeme is OperationLexeme)
+            {
+                throw new ExpressionSyntaxException();
+            }
+            last = lexeme;
+        }
+    }
     private List<ILexeme> Split(string expression)
     {
         StringFormatter formatter = new StringFormatter();
@@ -29,7 +45,11 @@ public class StringParser : IStringParser
 
         string[] parts = expression.Split(" ");
         parts = parts.Where(part => part != "").ToArray();
-        return parts.Select(Identify).ToList();
+
+        List<ILexeme> lexemes = parts.Select(Identify).ToList();
+        checkDoubleLexemes(lexemes);
+
+        return lexemes;
     }
     private List<ILexeme> PushOutOperations(OperationLexeme add, Stack<ILexeme> stack)
     {
