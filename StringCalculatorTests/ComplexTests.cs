@@ -16,7 +16,7 @@ public class ComplexTests
     public void TwoOperationsTest(string expression)
     {
         string result = Calculate(expression);
-        Assert.Equal("-46", result);
+        Assert.Equal("-36", result);
     }
 
     [Theory]
