@@ -6,6 +6,7 @@ public class StringParser : IStringParser
     {
         foreach (Operation operation in Enum.GetValues(typeof(Operation)))
         {
+            if (part.Length != 1) break;
             if (((char)operation) == part[0]) return new OperationLexeme(operation);
         }
 
@@ -23,7 +24,11 @@ public class StringParser : IStringParser
     }
     private List<ILexeme> Split(string expression)
     {
+        StringFormatter formatter = new StringFormatter();
+        expression = formatter.Format(expression);
+
         string[] parts = expression.Split(" ");
+        parts = parts.Where(part => part != "").ToArray();
         return parts.Select(Identify).ToList();
     }
     private List<ILexeme> PushOutOperations(OperationLexeme add, Stack<ILexeme> stack)

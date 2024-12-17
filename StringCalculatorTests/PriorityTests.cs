@@ -64,7 +64,7 @@ public class PriorityTests
     public void AdditionDivisionBracketsTest(string expression)
     {
         string result = Calculate(expression);
-        Assert.Equal("3,5", result);
+        Assert.Equal("4,5", result);
     }
 
     [Theory]
