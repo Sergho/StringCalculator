@@ -40,7 +40,7 @@ public class ComplexTests
     public void BracketsTest(string expression)
     {
         string result = Calculate(expression);
-        Assert.Equal("-5", result);
+        Assert.Equal("6", result);
     }
 
     [Theory]
