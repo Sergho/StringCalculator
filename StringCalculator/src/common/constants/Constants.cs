@@ -1,6 +1,6 @@
 namespace StringCalculator;
 
-public static class Cosntants
+public static class Constants
 {
     public static readonly Dictionary<Operation, int> Priorities = new Dictionary<Operation, int>
     {
