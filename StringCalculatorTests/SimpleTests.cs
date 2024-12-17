@@ -64,7 +64,7 @@ public class SimpleTests
     public void NegativeResultTest(string expression)
     {
         string result = Calculate(expression);
-        Assert.Equal("6", result);
+        Assert.Equal("-6", result);
     }
 
     [Theory]
