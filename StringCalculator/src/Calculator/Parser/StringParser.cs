@@ -14,7 +14,7 @@ public class StringParser : IStringParser
 
         try
         {
-            return new OperandLexeme(int.Parse(part));
+            return new OperandLexeme(double.Parse(part));
         }
         catch (Exception)
         {
